@@ -1,0 +1,23 @@
+@mixin btn($bg-color: $primary /* <== default value if nothing provided */) {
+	text-decoration: none;
+	cursor: pointer;
+	display: inline-block;
+	border: 0;
+	padding: 1.575rem 3rem;
+	border-radius: 0;
+	font-size: 0.875rem;
+	text-transform: uppercase;
+	font-weight: 700;
+	color: #fff;
+	line-height: 1;
+	background-color: $bg-color;
+}
+
+.btn {
+	@include btn;
+	font-family: $heading;
+
+	&:hover {
+		opacity: 0.85;
+	}
+}

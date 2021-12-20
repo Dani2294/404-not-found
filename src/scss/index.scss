@@ -1,0 +1,74 @@
+// Imports fonts
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@700&family=Space+Mono:wght@400;700&display=swap');
+
+/* Import variables */
+@import 'variables';
+
+/* base & layout */
+@import 'base';
+@import 'layout';
+
+/* components (button, card, navbar...) */
+@import 'components/button';
+
+header {
+	height: 60px;
+
+	h1 {
+		font-size: 1.5rem;
+		line-height: 60px;
+		font-family: $heading;
+	}
+}
+
+.hero {
+	height: 100%;
+	padding-bottom: 2rem;
+
+	.hero_img {
+		margin: 4rem 0;
+	}
+
+	.hero_content {
+		h1 {
+			font-size: 3rem;
+			line-height: 60px;
+			font-family: $heading;
+			color: $primary;
+		}
+
+		p {
+			font-family: $body;
+			font-size: 1.125rem;
+			line-height: 1.5;
+			color: $secondary;
+			margin: 1.875rem 0 3.75rem;
+		}
+	}
+
+	@media (min-width: 1024px) {
+		display: flex;
+		padding-top: 10rem;
+
+		.hero_img {
+			flex: 1;
+			margin: 0;
+			img {
+				width: 75%;
+			}
+		}
+
+		.hero_content {
+			flex: 1;
+
+			h1 {
+				font-size: 4rem;
+				line-height: 80px;
+			}
+
+			p {
+				max-width: 50%;
+			}
+		}
+	}
+}
